@@ -1,0 +1,20 @@
+@import 'bourbon/bourbon';
+@import 'normalize';
+@import 'box-sizing';
+
+@import 'padroes';
+
+
+body{
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+@import 'artigos';
+
+main{
+	
+	article{
+		@extend %textoartigos;
+	}
+}
