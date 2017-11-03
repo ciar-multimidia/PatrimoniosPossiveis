@@ -1,20 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:700,700i|Source+Sans+Pro:400,400i,700,700i');
+
+
+
 @import 'bourbon/bourbon';
 @import 'normalize';
 @import 'box-sizing';
 
 @import 'padroes';
 
+#topo{
+	width: 100%;
+	height: 80px;
+	background-color: grey;
+}
 
-body{
-	font-size: 16px;
-	line-height: 1.6;
+
+main{
+	width: 100%;
+	@include display(flex);
+	@include flex-direction(column);
+	@include align-items(center);
+	// @include flex-wrap(wrap);
+}
+
+$width: 1200px;
+
+#cabecalho-artigo{
+	width: $width;
+	@include display(flex);
+	@include justify-content(space-between);
+	@include flex-wrap(wrap);
+	@include align-items(flex-start);
+
+
+	h1{
+		width: 100%;
+		font-size: 2.5em;
+	}
+
+	.resumos{
+		width: 720px;
+	}
+
+	.minicurriculo{
+		padding: 40px 40px;
+		width: 300px;
+		border: 2px solid black;
+		p{
+			margin: 0;
+		}
+	}
+}
+
+#comeco-conteudo{
+	width: 100%;
+	height: 0;
+	border: none;
+	border-bottom: 1px solid grey;
 }
 
 @import 'artigos';
 
-main{
-	
-	article{
-		@extend %textoartigos;
-	}
+#conteudo{
+	width: $width;
+	@extend %textoartigos;
+}
+
+footer{
+	width: 100%;
 }

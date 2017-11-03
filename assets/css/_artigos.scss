@@ -1,3 +1,150 @@
 %textoartigos{
+
+	& > *{
+		width: 630px;
+	}
+
+
+
+	h2, h3, h4{
+		width: 100%;
+	}
+
+
+
+	a[href*="http"], a[href*="www"], a[target*="blank"], a:link{
+		overflow-wrap: break-word;
+		word-break: break-all;
+	}
+
+
+
+	blockquote{
+		font-size: 0.9em;
+		padding: 0em 1em 0em 4em;
+		margin: 0;
+	}
+
+
+
+	table{
+		margin: 3em 0;
+		width: auto;
+		max-width: 100%;
+		min-width: 630px;
+		border-top: 2px solid black;
+		border-bottom: 2px solid black;
+		border-spacing: 0;
+		border-collapse: collapse;
+		font-size: 0.9em;
+
+		caption{
+			text-align: left;
+			caption-side: bottom;
+		}
+		td,th{
+			text-align: left;
+			padding: 0.5em;
+			border-style: dotted;
+			border-color: hsl(0, 0%, 70%);
+			border-width: 0;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			&:last-child{
+				border-right-width: 0px;
+			}
+		}
+
+		thead{
+			tr{
+				th{
+					padding: 0.2em 0.5em;
+					border-bottom: 1px solid black;
+				}
+			}
+		}
+
+		tbody{
+			tr:last-child{
+				td,th{
+					border-bottom-width: 0px;
+				}
+			}
+		}
+	}
+
+
+
+	figure{
+			margin: 0;
+			width: 630px;
+			position: relative;
+
+
+			&:after{
+				content: '';
+				position: absolute;
+				right: 5px;
+				top: 5px;
+				width: 40px;
+				height: 40px;
+				background-image: url(../media/ico_expand.svg);
+				background-size: contain;
+				opacity: 0;
+				@include transition(opacity 0.2s linear);
+			}
+
+			&:hover{
+				cursor: pointer;	
+				&:before{
+					opacity: 1;
+				}
+				&:after{
+					opacity: 1;
+				}
+			}
+
+				
 	
+			
+			img{
+				width: 630px;
+				height: auto;
+				@include transition(all 0.3s ease-out);
+				@include transition-property(height, width);
+			}
+
+			&.ampliado, &.vertical.ampliado{
+				width: auto;
+				max-width: 100%;
+				min-width: 630px;
+				img{
+					width: auto;
+					max-width: 100%;
+					max-height: none;
+					min-width: 630px;
+				}
+				&:after{
+					background-image: url(../media/ico_collapse.svg);
+				}
+			}
+
+			&.vertical{
+				display: inline-block;
+				width: auto;
+				img{
+					width: auto;
+					max-width: 630px;
+					max-height: 630px;
+				}
+			}
+
+		figcaption{
+			font-size: 0.9em;
+
+		}
+	}
+
+
+
 }
