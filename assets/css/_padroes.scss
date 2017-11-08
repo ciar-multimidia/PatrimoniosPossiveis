@@ -13,3 +13,21 @@ h1, h2, h3, h4{
 	font-family: $fonte-titulo;
 	font-weight: bold;
 }
+
+a[href*="http"], a[href*="www"], a[target*="blank"], a:link{
+	overflow-wrap: break-word;
+	word-break: break-all;
+	&:visited, &:active, &:hover{
+		color: #2042BD;
+
+	}
+}
+
+b, strong{
+	font-weight: bold;
+}
+
+i, em{
+	font-style: italic;
+}
+

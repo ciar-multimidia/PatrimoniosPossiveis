@@ -1,23 +1,24 @@
-%textoartigos{
 
-	& > *{
-		width: 630px;
+
+$width-vertical: 420px;
+
+figure{
+	figcaption{
+		font-size: 0.9em;
+		line-height: 1.4;
 	}
+}
 
-
+section.texto{
+	width: $width;
 
 	h2, h3, h4{
 		width: 100%;
 	}
 
-
-
-	a[href*="http"], a[href*="www"], a[target*="blank"], a:link{
-		overflow-wrap: break-word;
-		word-break: break-all;
+	& > *{
+		width: $width-texto-padrao;
 	}
-
-
 
 	blockquote{
 		font-size: 0.9em;
@@ -25,13 +26,11 @@
 		margin: 0;
 	}
 
-
-
 	table{
 		margin: 3em 0;
 		width: auto;
 		max-width: 100%;
-		min-width: 630px;
+		min-width: $width-texto-padrao;
 		border-top: 2px solid black;
 		border-bottom: 2px solid black;
 		border-spacing: 0;
@@ -72,79 +71,327 @@
 			}
 		}
 	}
+}
 
 
+section.imagem-unica{
+	margin: 2em;
+	// padding: 1em 0;
+	width: 100%;
+	@include display(flex);
+	@include justify-content(center);
+	@include align-items(center);
+	background-color: hsl(0, 0%, 97%);
 
 	figure{
-			margin: 0;
-			width: 630px;
-			position: relative;
+		margin: 0;
+		width: auto;
+		max-width: $width-texto-padrao;
+		&.vertical{
+			max-width: $width-vertical;
+		}
+		// @include transition(all 0.3s ease-out);
+		// @include transition-property(max-width);
+		position: relative;
+		@include display(flex);
+		@include flex-direction(column);
+		// @include align-items(center);
 
+		&:after{
+			content: '';
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			width: 40px;
+			height: 40px;
+			background-image: url(../media/ico_expand.svg);
+			background-size: contain;
+			opacity: 0;
+			@include transition(opacity 0.2s linear);
+			// z-index: 1000000;
+		}
+
+		&:hover{
 
 			&:after{
-				content: '';
-				position: absolute;
-				right: 5px;
-				top: 5px;
-				width: 40px;
-				height: 40px;
-				background-image: url(../media/ico_expand.svg);
-				background-size: contain;
-				opacity: 0;
-				@include transition(opacity 0.2s linear);
+				opacity: 1;
 			}
+		}
+
+		img{
+			display: block;
+			max-width: 100%;
+			width: auto;
+			height: auto;
+			position: relative;
 
 			&:hover{
 				cursor: pointer;	
-				&:before{
-					opacity: 1;
-				}
-				&:after{
-					opacity: 1;
-				}
 			}
+		}
 
-				
-	
-			
+		&.ampliado, &.vertical.ampliado{
+			max-width: $width;
+			min-width: $width-texto-padrao;
 			img{
-				width: 630px;
-				height: auto;
-				@include transition(all 0.3s ease-out);
-				@include transition-property(height, width);
-			}
-
-			&.ampliado, &.vertical.ampliado{
 				width: auto;
 				max-width: 100%;
-				min-width: 630px;
-				img{
-					width: auto;
-					max-width: 100%;
-					max-height: none;
-					min-width: 630px;
-				}
-				&:after{
-					background-image: url(../media/ico_collapse.svg);
-				}
+				max-height: none;
+				min-width: $width-texto-padrao;
 			}
 
-			&.vertical{
-				display: inline-block;
-				width: auto;
-				img{
-					width: auto;
-					max-width: 630px;
-					max-height: 630px;
-				}
+			&:after{
+				background-image: url(../media/ico_collapse.svg);
 			}
+
+		}
+
 
 		figcaption{
 			font-size: 0.9em;
 
+			// position: absolute;
+			// bottom: 0; left: 0;
+			// color: white;
+			// padding: 0.8em 0.3em 0.3em;
+			// width: 100%;
+			// @include linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+			// text-overflow: ellipsis;
+			// overflow: hidden;
+			// white-space: nowrap;
+
+
+		}
+	}
+}
+
+section.galeria{
+	margin: 2em;
+	// padding: 1em 0;
+	width: 100%;
+	// @include display(flex);
+	// @include justify-content(center);
+	// @include align-items(center);
+	background-color: hsl(0, 0%, 97%);
+	overflow: hidden;
+	position: relative;
+
+	div{
+		&:not(.thumbnails-container){
+			width: auto;
+			white-space: nowrap;
+			// overflow: visible;
+			position: relative;
+			@include transition(transform 0.4s ease-out);
 		}
 	}
 
+	div.figures-container{
+	
+		
+		figure{
+			display: inline-block;
+			white-space: normal;
+			width: auto;
+			max-width: $width-texto-padrao;
+			max-height: $width-texto-padrao;
+			margin: 0;
+			margin-right: 1em;
+			vertical-align: top;
+			img{
+				display: block;
+				max-width: $width-texto-padrao;
+				max-height: $width-vertical;
+				
+			}
 
+			figcaption{
+				font-size: 0.8em;
+			}
+		}
+	}
+
+	div.imagens-container{
+		
+		img{
+			display: inline-block;
+			white-space: normal;
+			width: auto;
+			// max-width: $width-texto-padrao;
+			max-height: $width-texto-padrao*0.6666;
+			margin: 0;
+			margin-right: 1em;
+			vertical-align: middle;
+			opacity: 0.1;
+			@include transition(opacity 0.2s linear);
+			&.ativo{
+				opacity: 1;
+			}
+
+			&:hover{
+				cursor: pointer;
+			}
+		}
+	}
+
+	div.captions-container{
+		margin-top: 1em;
+		p{
+			display: inline-block;
+			white-space: normal;
+			width: $width-texto-padrao;
+			font-size: 0.9em;
+			line-height: 1.4;
+			margin-right: 1em;
+			opacity: 0.2;
+			@include transition(opacity 0.2s linear);
+			&.ativo{
+				opacity: 1;
+			}
+		}
+	}
+
+	div.thumbnails-container{
+		margin: 2em auto 0;
+		width: $width;
+		@include display(flex);
+		@include justify-content(center);
+		button{
+			display: inline-block;
+			white-space: normal;
+			@include appearance(none);
+			background-color: transparent;
+			border: none;
+			outline: none;
+			padding: 0;
+			margin-right: 4px;
+			height: 40px;
+			width: auto;
+			opacity: 0.4;
+			@include transition(opacity 0.2s linear);
+			&.ativo{
+				opacity: 1;
+			}
+
+			&:hover{
+				cursor: pointer;
+			}
+
+			img{
+				max-height: 100%;
+				width: auto;
+				display: block;	
+			}
+		}
+	}
+}
+
+
+
+
+button.botao-rodape{
+	@include appearance(none);
+	outline: none;
+	display: inline;
+	height: auto;
+	width: auto;
+	margin: 0;
+	padding: 0.2em 0.3em;
+	font-family: $fonte-corpo;
+	font-size: 0.9em;
+	line-height: 1;
+	background-color: hsl(0,0,90%);
+	border-radius: 2px;
+	border: 1px solid hsl(0,0,70%);
+	vertical-align: top;
+	&:before{
+		display: inline;
+		content: attr(data-numero);
+	}
+	&:hover{
+		cursor: pointer;
+	}
+
+	&.focus{
+		outline: none;
+	}
+
+	@include transition(all 0.1s linear);
+	@include transition-property(color, background-color, border);
+	&.ativado{
+		border-color: black;
+		background-color: black;
+		color: white;
+	}
 
 }
+
+.nota-rodape{
+	
+	position: absolute;
+	font-size: 0.9em;
+	padding: 1em 1em 2em;
+	margin: 0 10px;
+	// border: 1px solid map-get($cores, ciano);
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
+	background-color: white;
+	border-bottom-width: 4px;
+	width: auto;
+	max-width: 480px;
+	z-index: 3;
+	display: none;
+	opacity: 0;
+	@include transform(scale(0.5));
+	@include transition(all 0.2s ease-out);
+	@include transition-property(opacity, transform);
+	@include transform-origin(50% 100%);
+	&.origem-top{
+		@include transform-origin(50% 0%);
+
+	}
+
+	&.db{
+		display: block;
+	}
+	&.visivel{
+		opacity: 1;
+		@include transform(scale(1));
+		z-index: 4;
+	}
+
+	&.easing-saida{
+		@include transition-timing-function(ease-in);
+	}
+
+	button.fechar{
+		@include appearance(none);
+		outline: none;
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
+		width: 12px;
+		height: 12px;
+		border: none;
+		display: block;
+		img{
+			width: 100%;
+			height: auto;
+		}
+
+		&:hover{
+			cursor: pointer;
+		}
+
+		& + *{
+			margin-top: 0.4em;
+		}
+	}
+}
+
+
+
+
+
+
+
+

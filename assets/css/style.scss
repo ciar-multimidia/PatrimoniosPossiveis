@@ -15,15 +15,21 @@
 }
 
 
+$width: 1200px;
+$width-texto-padrao: 630px;
+
+
 main{
 	width: 100%;
 	@include display(flex);
 	@include flex-direction(column);
 	@include align-items(center);
 	// @include flex-wrap(wrap);
+
+	@import 'artigos';
+
 }
 
-$width: 1200px;
 
 #cabecalho-artigo{
 	width: $width;
@@ -39,31 +45,117 @@ $width: 1200px;
 	}
 
 	.resumos{
-		width: 720px;
+		width: $width-texto-padrao;
+
+		input[type='radio']{
+			position: absolute;
+			height: 0px;
+			width: 0px;
+			font-size: 0;
+			line-height: 0;
+			opacity: 0;
+			visibility: hidden;
+			left: -9999px;
+			right: -9999px;
+			&:checked + label{
+				opacity: 1;
+				& > div.fakeradio > div{
+					opacity: 1;
+				}
+			}
+		}
+
+		label{
+			display: inline-block;
+			font-size: 0.9em;
+			margin-right: 2em;
+			opacity: .6;
+			@include transition(opacity 0.2s linear);
+			
+			&:hover{
+				cursor: pointer;
+				opacity: 1;
+			}
+			div.fakeradio{
+				
+				width: 22px;
+				height: 22px;
+				border: 1px solid grey;
+				border-radius: 50%;
+				@include display(inline-flex);
+				@include justify-content(center);
+				@include align-items(center);
+				& > div{
+					display: inline;
+					width: 11px;
+					height: 11px;
+					border-radius: 50%;
+					background-color: black;
+					opacity: 0;
+					@include transition(opacity 0.2s linear);
+				}
+			}
+			
+		}
+
+		input[type='radio']:first-of-type:checked ~ section.resumo:first-of-type{
+			display: block;
+		}
+
+		input[type='radio']:nth-of-type(2):checked ~ section.resumo:nth-of-type(2){
+			display: block;
+		}
+
+		section.resumo{
+			display: none;
+		}
 	}
 
 	.minicurriculo{
-		padding: 40px 40px;
-		width: 300px;
+		width: 450px;
 		border: 2px solid black;
-		p{
+		h2{
+			font-size: 1.3em;
 			margin: 0;
+			margin-bottom: 1em;
+			background-color: black;
+			color: white;
+			padding: 0 20px;
 		}
+		div.autor{
+			padding: 0 20px;
+			line-height: 1.4;
+			margin-bottom: 2em;
+			h3{
+				font-size: 1em;
+				margin: 0;
+			}
+			p{
+				font-size: 0.9em;
+				margin: 0;
+				& + p{
+					margin-top: 1em;
+				}
+			}
+		}
+		
 	}
 }
 
 #comeco-conteudo{
+	margin: 2em 0;
 	width: 100%;
 	height: 0;
 	border: none;
 	border-bottom: 1px solid grey;
 }
 
-@import 'artigos';
 
 #conteudo{
-	width: $width;
-	@extend %textoartigos;
+	width: 100%;
+	@include display(flex);
+	@include flex-direction(column);
+	@include align-items(center);
 }
 
 footer{
