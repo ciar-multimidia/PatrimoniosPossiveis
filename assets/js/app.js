@@ -84,12 +84,12 @@ jQuery(document).ready(function($) {
 
 	var transitionendPrefixed = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
 
+
+// <img src=\'assets/media/icone-fechar.svg\' aria-hidden=\'true\'>\
 	notasRodape.each(function(index, el) {
 		$(el).prepend('\
 			<button class=\'fechar\' title=\'Fechar nota de rodapé\'>\
-				<img src=\'assets/media/icone-fechar.svg\' aria-hidden=\'true\'>\
-			</button>\
-		');
+			</button>');
 
 		$(el).find('.fechar').on('click', function(event) {
 			$(el).addClass('easing-saida');

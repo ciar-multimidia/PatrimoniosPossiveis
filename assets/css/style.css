@@ -784,10 +784,10 @@ main {
       width: 12px;
       height: 12px;
       border: none;
-      display: block; }
-      main .nota-rodape button.fechar img {
-        width: 100%;
-        height: auto; }
+      display: block;
+      background-image: url("../media/icone-fechar.svg");
+      background-size: contain;
+      background-position: center center; }
       main .nota-rodape button.fechar:hover {
         cursor: pointer; }
       main .nota-rodape button.fechar + * {
