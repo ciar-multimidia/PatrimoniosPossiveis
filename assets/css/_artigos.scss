@@ -12,8 +12,20 @@ figure{
 section.texto{
 	width: $width;
 
+	*:first-child{
+		margin-top: 0;
+	}
+
 	h2, h3, h4{
 		width: 100%;
+	}
+
+	h2{
+		font-size: 2em;
+	}
+
+	h3{
+		font-size: 1.6em;
 	}
 
 	& > *{
@@ -81,7 +93,7 @@ section.imagem-unica{
 	@include display(flex);
 	@include justify-content(center);
 	@include align-items(center);
-	background-color: hsl(0, 0%, 97%);
+	background-color: hsl(0, 0%, 93%);
 
 	figure{
 		margin: 0;
@@ -172,7 +184,7 @@ section.galeria{
 	// @include display(flex);
 	// @include justify-content(center);
 	// @include align-items(center);
-	background-color: hsl(0, 0%, 97%);
+	background-color: hsl(0, 0%, 93%);
 	overflow: hidden;
 	position: relative;
 
@@ -333,8 +345,8 @@ button.botao-rodape{
 	padding: 1em 1em 2em;
 	margin: 0 10px;
 	// border: 1px solid map-get($cores, ciano);
-	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
-	background-color: white;
+	box-shadow: 0px 4px 15px rgba(0,0,0, 0.3);
+	background-color: $branco;
 	border-bottom-width: 4px;
 	width: auto;
 	max-width: 480px;

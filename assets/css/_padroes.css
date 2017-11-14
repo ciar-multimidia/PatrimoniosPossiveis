@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i");
+html.blockscroll, body.blockscroll {
+  overflow: hidden; }
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #404040;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #f7f7f7;
+  hyphenate: hyphen; }
+
+h1, h2, h3, h4 {
+  font-family: "Flama", Tahoma, sans-serif;
+  font-weight: 500; }
+
+a[href*="http"], a[href*="www"], a[target*="blank"], a[href*='mailto'], a:link {
+  overflow-wrap: break-word;
+  word-break: break-all; }
+  a[href*="http"]:visited, a[href*="http"]:active, a[href*="http"]:hover, a[href*="www"]:visited, a[href*="www"]:active, a[href*="www"]:hover, a[target*="blank"]:visited, a[target*="blank"]:active, a[target*="blank"]:hover, a[href*='mailto']:visited, a[href*='mailto']:active, a[href*='mailto']:hover, a:link:visited, a:link:active, a:link:hover {
+    color: #2042BD; }
+
+b, strong {
+  font-weight: bold; }
+
+i, em {
+  font-style: italic; }
+
+/*# sourceMappingURL=_padroes.css.map */

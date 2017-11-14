@@ -1,5 +1,25 @@
 jQuery(document).ready(function($) {
 
+	// variação de cor do título
+	var sessionCor = 'patripossi_coratual';
+	var coratual = sessionStorage.getItem(sessionCor);
+	if (coratual) {
+		console.log(coratual);
+		$('#topo h1').addClass('var'+coratual);
+		switch(coratual){
+			case '1': sessionStorage.setItem(sessionCor, '2'); break;
+			case '2': sessionStorage.setItem(sessionCor, '3'); break;
+			case '3': sessionStorage.setItem(sessionCor, '1'); break;
+		}
+	} else{
+		$('#topo h1').addClass('var1');
+		sessionStorage.setItem(sessionCor, '2');
+	}
+
+
+
+
+	// função que retorna um objeto com todas as variações do transform
 	var crossBrowserTransform = function(valor){
 		return {
 			'-webkit-transform': valor,
@@ -9,12 +29,19 @@ jQuery(document).ready(function($) {
 	}
 
 
+
+
+	// Ampliação das fotos
 	var figures = $('#conteudo section.imagem-unica figure img');
 	figures.on('click', function(event) {
 		$(this).parent().toggleClass('ampliado');
 	});
 
 
+
+
+
+	// Galerias de foto
 	var galerias = $('section.galeria');
 
 	if (galerias.length > 0) {
@@ -77,6 +104,10 @@ jQuery(document).ready(function($) {
 		});
 	}
 
+
+
+
+	// notas de rodapé
 	var html = $('html')
 	var corpo = $('body');
 	var btRodape = $('button.botao-rodape');
@@ -162,4 +193,42 @@ jQuery(document).ready(function($) {
 		
 
 	});
+
+
+
+
+
+	// Sumário
+
+	var htmlecorpo = $('html, body');
+	var footer = $('footer');
+	var btsumario = footer.find('.navegadores button');
+	var fecharsumario = footer.find('button.fechar');
+	var itenssumario = footer.find('.sumario .itens > a');
+	btsumario.on('click', function(event) {
+		event.preventDefault();
+		htmlecorpo.addClass('blockscroll');
+		footer.addClass('fullscreen');
+	});
+
+	fecharsumario.on('click', function(event) {
+		$(this).removeClass('visivel');
+		event.preventDefault();
+		htmlecorpo.removeClass('blockscroll');
+		footer.removeClass('fullscreen');
+	});
+
+	footer.on(transitionendPrefixed, function(){
+		if ($(this).hasClass('fullscreen')) {
+			fecharsumario.addClass('visivel');
+			itenssumario.addClass('visivel');
+		}
+	});
 });
+
+
+
+
+
+
+
