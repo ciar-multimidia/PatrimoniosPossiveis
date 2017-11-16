@@ -209,6 +209,7 @@ jQuery(document).ready(function($) {
 		event.preventDefault();
 		htmlecorpo.addClass('blockscroll');
 		footer.addClass('fullscreen');
+		itenssumario.removeClass('visivel');
 	});
 
 	fecharsumario.on('click', function(event) {
@@ -221,7 +222,15 @@ jQuery(document).ready(function($) {
 	footer.on(transitionendPrefixed, function(){
 		if ($(this).hasClass('fullscreen')) {
 			fecharsumario.addClass('visivel');
-			itenssumario.addClass('visivel');
+			var incremento = 30;
+			var tempo = 0;
+			itenssumario.each(function(index, el) {
+				setTimeout(function(){
+					$(el).addClass('visivel');
+				}, tempo);
+				tempo += incremento;
+
+			});
 		}
 	});
 });

@@ -346,9 +346,9 @@ footer{
 			@include justify-content(flex-start);
 
 			a{
-				width: 30%;
+				width: 45%;
 				margin-right: 5%;
-				&:nth-child(3n){
+				&:nth-child(2n){
 					margin-right: 0;
 				}
 				color: white;
@@ -364,10 +364,10 @@ footer{
 					opacity: 1;
 				}
 				h2{
-					font-size: 1em;
-					font-family: $fonte-corpo;
+					font-size: 1.5em;
+					font-family: $fonte-titulo;
 					margin: 0;
-					font-weight: bold;
+					font-weight: 300;
 					line-height: 1.4;
 
 				}

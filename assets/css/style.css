@@ -1222,7 +1222,7 @@ footer {
       justify-content: flex-start;
       -ms-flex-pack: start; }
       footer nav.sumario section.itens a {
-        width: 30%;
+        width: 45%;
         margin-right: 5%;
         color: white;
         text-decoration: none;
@@ -1236,15 +1236,15 @@ footer {
         -webkit-transition-property: opacity;
         -moz-transition-property: opacity;
         transition-property: opacity; }
-        footer nav.sumario section.itens a:nth-child(3n) {
+        footer nav.sumario section.itens a:nth-child(2n) {
           margin-right: 0; }
         footer nav.sumario section.itens a.visivel {
           opacity: 1; }
         footer nav.sumario section.itens a h2 {
-          font-size: 1em;
-          font-family: "Source Sans Pro", sans-serif;
+          font-size: 1.5em;
+          font-family: "Flama", Tahoma, sans-serif;
           margin: 0;
-          font-weight: bold;
+          font-weight: 300;
           line-height: 1.4; }
         footer nav.sumario section.itens a p {
           margin: 0; }
