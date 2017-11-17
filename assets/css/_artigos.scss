@@ -2,6 +2,14 @@
 
 $width-vertical: 420px;
 
+h1{
+	width: 100%;
+	font-size: 3em;
+	line-height: 1.2;
+	font-weight: 300;
+	color: black;
+}
+
 figure{
 	figcaption{
 		font-size: 0.9em;
@@ -11,6 +19,27 @@ figure{
 
 section.texto{
 	width: $width;
+
+	&.duplo{
+		@include display(flex);
+		& > div{
+			line-height: 1.4;
+			width: 50%;
+			padding-right: 2em;
+		}
+
+		h4{
+			margin: 0;
+			font-family: $fonte-corpo;
+			font-weight: bold;
+			font-size: 1em;
+		}
+
+		p{
+			width: 100%;
+			margin: 0 0 2em;
+		}
+	}
 
 	*:first-child{
 		margin-top: 0;

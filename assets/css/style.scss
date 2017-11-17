@@ -89,11 +89,6 @@ main{
 
 	h1{
 		margin: 0 0 1.5em;
-		width: 100%;
-		font-size: 3em;
-		line-height: 1.2;
-		font-weight: 300;
-		color: black;
 	}
 
 	.resumos{
@@ -220,168 +215,13 @@ main{
 	@include flex-direction(column);
 	@include align-items(center);
 	padding-bottom: 150px;
-}
-
-
-
-
-
-footer{
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	background-color: rgba(0,0,0,0.85);	
-	color: white;
-	width: 100%;
-	height: 50px;
-	@include transition(all 0.5s ease-in-out);
-	@include transition-property(background-color, height);
-
-	&.fullscreen{
-		overflow: scroll;
-		height: 100vh;
-		background-color: rgba(0,0,0,0.95);
-		section.navegadores{
-			display: none;
-		}
-
-		nav.sumario{
-			display: block;
-		}
-
-		button.fechar{
-			display: block;
-		}
-	}
-
-	button.fechar{
-		position: fixed;
-		right: 0;
-		top: 0;
-		font-family: $fonte-corpo;
-		@include appearance(none);
-		background: none;
-		border: none;
-		outline: none;
-		color: white;
-		width: 36px;
-		height: 36px;
-		margin: 12px;
-		background-size: contain;
-		background-image: url(../media/icone-fechar-white.svg);
-		display: none;
-		opacity: 0;
-		@include transition(all 0.2s linear);
-		@include  transition-property(opacity);
-
-		&:hover{
-			cursor: pointer;
-		}
-
-		&.visivel{
-			opacity: 1;
-		}
-
-	}
-	
-
-	section.navegadores{
-		width: $width;
-		height: 50px;
-		margin: 0 auto;
-		@include display(flex);
-		@include justify-content(space-between);
-		button{
-			font-family: $fonte-corpo;
-			@include appearance(none);
-			background: none;
-			border: none;
-			outline: none;
-			color: white;
-			height: 100%;
-			line-height: 1;
-			svg{
-				margin-right: 0.2em;
-				display: inline-block;
-				height: 1em;
-				width: auto;
-			vertical-align: middle;
-
-			}
-
-			&:hover{
-				cursor: pointer;
-			}
-		}
-
-		a{
-			@include display(flex);
-			@include align-items(center);
-			height: 100%;
-			color: white;
-			line-height: 1;
-			text-decoration: none;
-		}
-	}
-
-	nav.sumario{
-		width: $width;
-		margin: 0 auto;
-		padding-top: 5em;
-		display: none;
-
-		h1{
-			text-transform: uppercase;
-			font-size: 4em;
-			text-align: center;
-			font-weight: bold;
-			margin: 0;
-			margin-bottom: 1em;
-			line-height: 1;
-		}
-
-		section.itens{
-			@include display(flex);
-			@include flex-wrap(wrap);
-			@include justify-content(flex-start);
-
-			a{
-				width: 45%;
-				margin-right: 5%;
-				&:nth-child(2n){
-					margin-right: 0;
-				}
-				color: white;
-				text-decoration: none;
-				margin-bottom: 3em;
-				overflow-wrap: normal; 
-				word-break: normal;
-				opacity: 0;
-				@include transition(all 0.2s linear);
-				@include  transition-property(opacity);
-
-				&.visivel{
-					opacity: 1;
-				}
-				h3{
-					font-size: 1.5em;
-					font-family: $fonte-titulo;
-					margin: 0;
-					font-weight: 300;
-					line-height: 1.4;
-
-				}
-
-				
-				p{
-					margin: 0;
-				}
-			}
-		}
-	
-		
-		
-
-
+	&.ficha-tecnica{
+		@include flex-wrap(wrap);
+		padding-top: 50px;
 	}
 }
+
+
+
+
+@import 'footer-e-sumario';

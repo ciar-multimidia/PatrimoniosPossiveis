@@ -1,0 +1,222 @@
+footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.85);	
+	color: white;
+	width: 100%;
+	height: 50px;
+	@include transition(all 0.5s ease-in-out);
+	@include transition-property(background-color, height);
+
+	&.fullscreen{
+		overflow: scroll;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.95);
+		section.navegadores{
+			display: none;
+		}
+
+		button.fechar{
+			display: block;
+		}
+	}
+
+	button.fechar{
+		position: fixed;
+		right: 0;
+		top: 0;
+		font-family: $fonte-corpo;
+		@include appearance(none);
+		background: none;
+		border: none;
+		outline: none;
+		color: white;
+		width: 36px;
+		height: 36px;
+		margin: 12px;
+		background-size: contain;
+		background-image: url(../media/icone-fechar-white.svg);
+		display: none;
+		opacity: 0;
+		@include transition(all 0.2s linear);
+		@include  transition-property(opacity);
+
+		&:hover{
+			cursor: pointer;
+		}
+
+		&.visivel{
+			opacity: 1;
+		}
+
+	}
+	
+
+	section.navegadores{
+		width: $width;
+		height: 50px;
+		margin: 0 auto;
+		@include display(flex);
+		@include justify-content(space-between);
+		button{
+			font-family: $fonte-corpo;
+			@include appearance(none);
+			background: none;
+			border: none;
+			outline: none;
+			color: white;
+			height: 100%;
+			line-height: 1;
+			svg{
+				margin-right: 0.2em;
+				display: inline-block;
+				height: 1em;
+				width: auto;
+				vertical-align: middle;
+
+			}
+
+			&:hover{
+				cursor: pointer;
+				text-decoration: underline;
+			}
+		}
+
+		a{
+			@include display(flex);
+			@include align-items(center);
+			height: 100%;
+			color: white;
+			line-height: 1;
+			text-decoration: none;
+			&:hover{
+				cursor: pointer;
+				text-decoration: underline;
+			}
+
+			img{
+				display: inline-block;
+				height: 1em;
+				width: auto;
+				vertical-align: middle;
+			}
+
+			&.bt-anterior{
+				img{
+					@include transform(rotate(180deg));
+					margin-right: 0.5em;
+				}
+			}
+
+			&.bt-proximo{
+				img{
+					margin-left: 0.5em;
+				}
+			}
+		}
+	}
+
+	nav.sumario{
+		width: $width;
+		margin: 0 auto;
+		padding: 5em 0;
+		display: none;
+		@include transition(opacity 0.1s linear);
+		&.db{
+			display: block;
+		}
+		&.invisivel{
+			opacity: 0;
+		}
+
+		a{
+			color: white;
+			text-decoration: none;
+			&:hover{
+				color: white;
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+
+		h1{
+			text-transform: uppercase;
+			font-size: 4em;
+			text-align: center;
+			font-weight: bold;
+			margin: 0;
+			line-height: 1;
+		}
+
+		a.ficha-tecnica{
+			display: block;
+			width: 100%;
+			text-align: center;
+			font-family: $fonte-titulo;
+			font-size: 1.2em;
+			font-weight: 300;
+			margin-bottom: 4em;
+
+			
+		}
+		
+		div.ficha-e-galeria{
+			@include display(flex);
+			@include justify-content(center);
+
+			a{
+				margin-right: 1em;
+				&:last-child{
+					margin-right: 0;
+				}
+			}	
+		}
+
+		h2{
+			// font-family: $fonte-corpo;
+			width: 100%;
+			font-size: 1.7em;
+			font-weight: 300;
+			border-bottom: 1px dotted;
+			margin: 1em 0 0.5em;
+		}
+
+		section.itens{
+			@include display(flex);
+			@include flex-wrap(wrap);
+			@include justify-content(space-between);
+
+			a{
+				width: 50%;
+				padding-right: 2em;
+				margin-bottom: 2.5em;
+				overflow-wrap: normal; 
+				word-break: normal;
+
+				h3{
+					font-size: 1em;
+					font-family: $fonte-corpo;
+					margin: 0;
+					font-weight: bold;
+					line-height: 1.4;
+				}
+
+				p{
+					margin: 0;
+					font-style: italic;
+					color: hsl(0,0%,70%)
+				}
+			}
+
+			&.menores{
+				@include justify-content(flex-start);
+
+				a{
+					width: 25%;
+					padding-right: 1em;
+				}
+			}
+		}
+	}
+}

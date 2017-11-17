@@ -204,12 +204,13 @@ jQuery(document).ready(function($) {
 	var footer = $('footer');
 	var btsumario = footer.find('.navegadores button');
 	var fecharsumario = footer.find('button.fechar');
-	var itenssumario = footer.find('.sumario .itens > a');
+	var navsumario = footer.find('nav.sumario');
+
 	btsumario.on('click', function(event) {
 		event.preventDefault();
 		htmlecorpo.addClass('blockscroll');
 		footer.addClass('fullscreen');
-		itenssumario.removeClass('visivel');
+		navsumario.addClass('db');
 	});
 
 	fecharsumario.on('click', function(event) {
@@ -222,15 +223,8 @@ jQuery(document).ready(function($) {
 	footer.on(transitionendPrefixed, function(){
 		if ($(this).hasClass('fullscreen')) {
 			fecharsumario.addClass('visivel');
-			var incremento = 30;
-			var tempo = 0;
-			itenssumario.each(function(index, el) {
-				setTimeout(function(){
-					$(el).addClass('visivel');
-				}, tempo);
-				tempo += incremento;
-
-			});
+		} else{
+			navsumario.removeClass('db');
 		}
 	});
 });
