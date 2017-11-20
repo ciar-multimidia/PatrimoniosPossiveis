@@ -220,6 +220,16 @@ jQuery(document).ready(function($) {
 		footer.removeClass('fullscreen');
 	});
 
+	$(window).on('keyup', function(event){
+		switch(event.which){
+			case 27: 
+				fecharsumario.removeClass('visivel');
+				htmlecorpo.removeClass('blockscroll');
+				footer.removeClass('fullscreen');
+				break;
+		}
+	});
+
 	footer.on(transitionendPrefixed, function(){
 		if ($(this).hasClass('fullscreen')) {
 			fecharsumario.addClass('visivel');

@@ -373,7 +373,6 @@ button.botao-rodape{
 	font-size: 0.9em;
 	padding: 1em 1em 2em;
 	margin: 0 10px;
-	// border: 1px solid map-get($cores, ciano);
 	box-shadow: 0px 4px 15px rgba(0,0,0, 0.3);
 	background-color: $branco;
 	border-bottom-width: 4px;
@@ -385,6 +384,8 @@ button.botao-rodape{
 	@include transform(scale(0.5));
 	@include transition(all 0.2s ease-out);
 	@include transition-property(opacity, transform);
+
+
 	@include transform-origin(50% 100%);
 	&.origem-top{
 		@include transform-origin(50% 0%);

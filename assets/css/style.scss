@@ -215,7 +215,7 @@ main{
 	@include flex-direction(column);
 	@include align-items(center);
 	padding-bottom: 150px;
-	&.ficha-tecnica{
+	&.sem-header{
 		@include flex-wrap(wrap);
 		padding-top: 50px;
 	}

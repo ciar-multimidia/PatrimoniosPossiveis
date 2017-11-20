@@ -1087,7 +1087,7 @@ main {
   align-items: center;
   -ms-flex-align: center;
   padding-bottom: 150px; }
-  #conteudo.ficha-tecnica {
+  #conteudo.sem-header {
     -webkit-box-lines: multiple;
     -moz-box-lines: multiple;
     box-lines: multiple;
@@ -1110,7 +1110,8 @@ footer {
   transition: all 0.5s ease-in-out;
   -webkit-transition-property: background-color, height;
   -moz-transition-property: background-color, height;
-  transition-property: background-color, height; }
+  transition-property: background-color, height;
+  z-index: 5; }
   footer.fullscreen {
     overflow: scroll;
     height: 100vh;
