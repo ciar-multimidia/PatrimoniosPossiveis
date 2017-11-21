@@ -617,6 +617,43 @@ main {
         border-bottom: 1px solid black; }
       main section.texto table tbody tr:last-child td, main section.texto table tbody tr:last-child th {
         border-bottom-width: 0px; }
+  main section.ensaios {
+    width: 1200px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify; }
+    main section.ensaios a {
+      width: 32%;
+      margin-bottom: 3%;
+      color: white;
+      text-decoration: none;
+      position: relative;
+      background-color: black; }
+      main section.ensaios a:after {
+        display: block;
+        width: 100%;
+        content: '';
+        padding-top: 60%; }
   main section.imagem-unica {
     margin: 2em;
     width: 100%;

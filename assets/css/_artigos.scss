@@ -114,6 +114,26 @@ section.texto{
 	}
 }
 
+section.ensaios{
+	width: $width;
+	@include display(flex);
+	@include flex-wrap(wrap);
+	@include justify-content(space-between);
+	a{
+		width: 32%;
+		margin-bottom: 3%;
+		color: white;
+		text-decoration: none;
+		position: relative;
+		background-color: black;
+		&:after{
+			display: block;
+			width: 100%;
+			content: '';
+			padding-top: 60%;
+		}
+	}
+}
 
 section.imagem-unica{
 	margin: 2em;
