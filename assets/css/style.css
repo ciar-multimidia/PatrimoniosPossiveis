@@ -581,6 +581,7 @@ main {
       main section.texto.premios h2 + p {
         margin: 0; }
     main section.texto.premios h3 {
+      line-height: 1.4;
       margin: 0; }
       main section.texto.premios h3 + p {
         margin: 0; }
@@ -590,9 +591,10 @@ main {
       height: 1px;
       border: none;
       border-bottom: 1px dotted #404040;
-      margin: 2em 0; }
+      margin: 2em 0;
+      clear: both; }
     main section.texto.premios figure {
-      margin: 0;
+      margin: 0 0 2em 2em;
       padding: 0;
       float: right;
       width: 420px;
@@ -600,12 +602,10 @@ main {
       main section.texto.premios figure img {
         width: 100%;
         height: auto; }
-      main section.texto.premios figure:after {
-        content: ' ';
-        display: block;
-        font-size: 0;
-        line-height: 0;
-        clear: both; }
+    main section.texto.premios:after {
+      content: "";
+      display: table;
+      clear: both; }
     main section.texto *:first-child {
       margin-top: 0; }
     main section.texto h2, main section.texto h3, main section.texto h4 {

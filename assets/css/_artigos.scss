@@ -54,6 +54,7 @@ section.texto{
 
 		h3{
 			// font-size: 2em;
+			line-height: 1.4;
 			margin: 0;
 			& + p{
 				margin: 0;
@@ -68,10 +69,11 @@ section.texto{
 			border: none;
 			border-bottom: 1px dotted hsl(0,0%,25%);
 			margin: 2em 0;
+			clear: both;
 		}
 
 		figure{
-			margin: 0;
+			margin: 0 0 2em 2em;
 			padding: 0;
 			float: right;
 			width: $width-vertical;
@@ -80,14 +82,12 @@ section.texto{
 				width: 100%;
 				height: auto;
 			}
+		}
 
-			&:after{
-				content: ' ';
-				display: block;
-				font-size: 0;
-				line-height: 0;
-				clear: both;
-			}
+		&:after{
+			content: "";
+			  display: table;
+			  clear: both;
 		}
 	}
 
