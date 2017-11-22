@@ -223,10 +223,14 @@ jQuery(document).ready(function($) {
 	$(window).on('keyup', function(event){
 		switch(event.which){
 			case 27: 
-				fecharsumario.removeClass('visivel');
-				htmlecorpo.removeClass('blockscroll');
-				footer.removeClass('fullscreen');
+				if (footer.hasClass('fullscreen')) {
+					fecharsumario.removeClass('visivel');
+					htmlecorpo.removeClass('blockscroll');
+					footer.removeClass('fullscreen');
+				}
 				break;
+				
+				
 		}
 	});
 

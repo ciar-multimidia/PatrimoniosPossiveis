@@ -17,6 +17,8 @@ figure{
 	}
 }
 
+
+
 section.texto{
 	width: $width;
 
@@ -38,6 +40,54 @@ section.texto{
 		p{
 			width: 100%;
 			margin: 0 0 2em;
+		}
+	}
+
+	&.premios{
+		h2{
+			font-size: 2.8em;
+			margin-bottom: 0;
+			& + p{
+				margin: 0;
+			}
+		}
+
+		h3{
+			// font-size: 2em;
+			margin: 0;
+			& + p{
+				margin: 0;
+			}
+
+		}
+
+		hr{
+			display: block;
+			width: 100%;
+			height: 1px;
+			border: none;
+			border-bottom: 1px dotted hsl(0,0%,25%);
+			margin: 2em 0;
+		}
+
+		figure{
+			margin: 0;
+			padding: 0;
+			float: right;
+			width: $width-vertical;
+			height: auto;
+			img{
+				width: 100%;
+				height: auto;
+			}
+
+			&:after{
+				content: ' ';
+				display: block;
+				font-size: 0;
+				line-height: 0;
+				clear: both;
+			}
 		}
 	}
 
