@@ -553,6 +553,16 @@ main {
   main figure figcaption {
     font-size: 0.9em;
     line-height: 1.4; }
+  main span.pagina {
+    line-height: 1;
+    color: grey;
+    width: 100%;
+    display: block;
+    font-size: 0.9em;
+    text-align: right; }
+    main span.pagina:before {
+      display: inline;
+      content: 'p. '; }
   main section.texto {
     width: 1200px; }
     main section.texto.duplo {
@@ -614,6 +624,11 @@ main {
       font-size: 2em; }
     main section.texto h3 {
       font-size: 1.6em; }
+    main section.texto span.pagina {
+      width: 100%;
+      border-top: 1px dotted rgba(0, 0, 0, 0.4); }
+    main section.texto:first-child span.pagina:first-child {
+      border-width: 0px; }
     main section.texto > * {
       width: 630px; }
     main section.texto blockquote {
@@ -679,12 +694,23 @@ main {
       color: white;
       text-decoration: none;
       position: relative;
-      background-color: black; }
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5); }
       main section.ensaios a:after {
         display: block;
         width: 100%;
         content: '';
-        padding-top: 60%; }
+        padding-top: 54%; }
+      main section.ensaios a p {
+        background-color: none;
+        background: linear-gradient(to top, black, transparent);
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 1em 0.4em 0.4em; }
   main section.imagem-unica {
     margin: 2em;
     width: 100%;
@@ -800,6 +826,7 @@ main {
         max-width: 630px;
         max-height: 420px; }
       main section.galeria div.figures-container figure figcaption {
+        text-align: center;
         font-size: 0.8em; }
     main section.galeria div.imagens-container img {
       display: inline-block;
@@ -827,6 +854,7 @@ main {
         line-height: 1.4;
         margin-right: 1em;
         opacity: 0.2;
+        text-align: center;
         -webkit-transition: opacity 0.2s linear;
         -moz-transition: opacity 0.2s linear;
         transition: opacity 0.2s linear; }
@@ -1022,6 +1050,12 @@ main {
   -ms-flex-align: start; }
   #cabecalho-artigo h1 {
     margin: 0 0 1.5em; }
+  #cabecalho-artigo h2.eixo {
+    font-weight: 300;
+    font-size: 1.2em;
+    color: grey;
+    margin: 0;
+    line-height: 1; }
   #cabecalho-artigo .resumos {
     width: 630px; }
     #cabecalho-artigo .resumos input[type='radio'] {
@@ -1101,6 +1135,7 @@ main {
     background-color: #fcfcfc; }
     #cabecalho-artigo .minicurriculo h2 {
       font-size: 1.5em;
+      line-height: inherit;
       margin: 0.5em 0;
       color: black;
       padding: 0 20px;

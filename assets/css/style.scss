@@ -1,3 +1,4 @@
+@charset "UTF-8"; 
 
 @import 'bourbon/bourbon';
 @import 'normalize';
@@ -91,6 +92,14 @@ main{
 		margin: 0 0 1.5em;
 	}
 
+	h2.eixo{
+		font-weight: 300;
+		font-size: 1.2em;
+		color: grey;
+		margin: 0;
+		line-height: 1;
+	}
+
 	.resumos{
 		width: $width-texto-padrao;
 
@@ -164,6 +173,7 @@ main{
 		background-color: $branco;
 		h2{
 			font-size: 1.5em;
+			line-height: inherit;
 			margin: 0.5em 0;
 			// margin-bottom: 1em;
 			color: black;

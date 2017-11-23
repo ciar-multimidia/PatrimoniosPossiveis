@@ -17,6 +17,22 @@ figure{
 	}
 }
 
+span.pagina{
+	// position: absolute;
+	// left: 0;
+	line-height: 1;
+	color: grey;	
+	width: 100%;
+	// padding: 0.5em;	
+	display: block;
+	font-size: 0.9em;
+	text-align: right;
+	&:before{
+		display: inline;
+		content: 'p. ';
+	}
+}
+
 
 
 section.texto{
@@ -107,6 +123,16 @@ section.texto{
 		font-size: 1.6em;
 	}
 
+	span.pagina{
+		width: 100%;
+		border-top: 1px dotted rgba(0,0,0,0.4);
+		
+	}
+
+	&:first-child span.pagina:first-child{
+		border-width: 0px;
+	}
+
 	& > *{
 		width: $width-texto-padrao;
 	}
@@ -175,12 +201,26 @@ section.ensaios{
 		color: white;
 		text-decoration: none;
 		position: relative;
-		background-color: black;
+		// background-color: black;
+		background-size: cover;
+		background-position: center;
+		box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
 		&:after{
 			display: block;
 			width: 100%;
 			content: '';
-			padding-top: 60%;
+			padding-top: 54%;
+		}
+
+		p{
+			background-color: none;
+			background: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.0));
+			margin: 0;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 1em 0.4em 0.4em;
 		}
 	}
 }
@@ -317,6 +357,7 @@ section.galeria{
 			}
 
 			figcaption{
+				text-align: center;
 				font-size: 0.8em;
 			}
 		}
@@ -355,6 +396,7 @@ section.galeria{
 			line-height: 1.4;
 			margin-right: 1em;
 			opacity: 0.2;
+			text-align: center;
 			@include transition(opacity 0.2s linear);
 			&.ativo{
 				opacity: 1;
