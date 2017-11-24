@@ -126,11 +126,13 @@ section.texto{
 	span.pagina{
 		width: 100%;
 		border-top: 1px dotted rgba(0,0,0,0.4);
+		padding-top: 0.5em;
 		
 	}
 
 	&:first-child span.pagina:first-child{
 		border-width: 0px;
+		padding-top: 0;
 	}
 
 	& > *{
@@ -196,6 +198,8 @@ section.ensaios{
 	@include flex-wrap(wrap);
 	@include justify-content(space-between);
 	a{
+		overflow-wrap: normal;
+		word-break: normal;
 		width: 32%;
 		margin-bottom: 3%;
 		color: white;
@@ -212,6 +216,16 @@ section.ensaios{
 			padding-top: 54%;
 		}
 
+		&:hover, &:active, &:visited{
+			color: white;
+		}
+
+		&:hover{
+			p{
+				padding: 1em 0.4em 1em;
+			}
+		}
+
 		p{
 			background-color: none;
 			background: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.0));
@@ -221,6 +235,7 @@ section.ensaios{
 			bottom: 0;
 			left: 0;
 			padding: 1em 0.4em 0.4em;
+			@include transition(padding 0.2s linear);
 		}
 	}
 }

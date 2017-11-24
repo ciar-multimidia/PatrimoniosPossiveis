@@ -33,7 +33,7 @@ h1, h2, h3, h4{
 a[href*="http"], a[href*="www"], a[target*="blank"], a[href*='mailto'], a:link{
 	overflow-wrap: break-word;
 	word-break: break-all;
-	&:visited, &:active, &:hover{
+	&, &:visited, &:active, &:hover{
 		color: #2042BD;
 
 	}

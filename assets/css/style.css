@@ -446,7 +446,7 @@ h1, h2, h3, h4 {
 a[href*="http"], a[href*="www"], a[target*="blank"], a[href*='mailto'], a:link {
   overflow-wrap: break-word;
   word-break: break-all; }
-  a[href*="http"]:visited, a[href*="http"]:active, a[href*="http"]:hover, a[href*="www"]:visited, a[href*="www"]:active, a[href*="www"]:hover, a[target*="blank"]:visited, a[target*="blank"]:active, a[target*="blank"]:hover, a[href*='mailto']:visited, a[href*='mailto']:active, a[href*='mailto']:hover, a:link:visited, a:link:active, a:link:hover {
+  a[href*="http"], a[href*="http"]:visited, a[href*="http"]:active, a[href*="http"]:hover, a[href*="www"], a[href*="www"]:visited, a[href*="www"]:active, a[href*="www"]:hover, a[target*="blank"], a[target*="blank"]:visited, a[target*="blank"]:active, a[target*="blank"]:hover, a[href*='mailto'], a[href*='mailto']:visited, a[href*='mailto']:active, a[href*='mailto']:hover, a:link, a:link:visited, a:link:active, a:link:hover {
     color: #2042BD; }
 
 b, strong {
@@ -626,9 +626,11 @@ main {
       font-size: 1.6em; }
     main section.texto span.pagina {
       width: 100%;
-      border-top: 1px dotted rgba(0, 0, 0, 0.4); }
+      border-top: 1px dotted rgba(0, 0, 0, 0.4);
+      padding-top: 0.5em; }
     main section.texto:first-child span.pagina:first-child {
-      border-width: 0px; }
+      border-width: 0px;
+      padding-top: 0; }
     main section.texto > * {
       width: 630px; }
     main section.texto blockquote {
@@ -689,6 +691,8 @@ main {
     justify-content: space-between;
     -ms-flex-pack: justify; }
     main section.ensaios a {
+      overflow-wrap: normal;
+      word-break: normal;
       width: 32%;
       margin-bottom: 3%;
       color: white;
@@ -702,6 +706,10 @@ main {
         width: 100%;
         content: '';
         padding-top: 54%; }
+      main section.ensaios a:hover, main section.ensaios a:active, main section.ensaios a:visited {
+        color: white; }
+      main section.ensaios a:hover p {
+        padding: 1em 0.4em 1em; }
       main section.ensaios a p {
         background-color: none;
         background: linear-gradient(to top, black, transparent);
@@ -710,7 +718,10 @@ main {
         position: absolute;
         bottom: 0;
         left: 0;
-        padding: 1em 0.4em 0.4em; }
+        padding: 1em 0.4em 0.4em;
+        -webkit-transition: padding 0.2s linear;
+        -moz-transition: padding 0.2s linear;
+        transition: padding 0.2s linear; }
   main section.imagem-unica {
     margin: 2em;
     width: 100%;
@@ -1325,6 +1336,9 @@ footer {
         height: 1em;
         width: auto;
         vertical-align: middle; }
+      footer section.navegadores a[disabled] {
+        opacity: 0.2;
+        pointer-events: none; }
       footer section.navegadores a.bt-anterior img {
         -webkit-transform: rotate(180deg);
         -moz-transform: rotate(180deg);

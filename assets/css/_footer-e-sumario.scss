@@ -103,6 +103,12 @@ footer{
 				vertical-align: middle;
 			}
 
+			&[disabled]{
+				opacity: 0.2;
+				pointer-events: none;
+
+			}
+
 			&.bt-anterior{
 				img{
 					@include transform(rotate(180deg));
