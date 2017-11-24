@@ -91,6 +91,10 @@ footer{
 			color: white;
 			line-height: 1;
 			text-decoration: none;
+
+			&:hover, &:visited, &:active, &:focus{
+				color: inherit;
+			}
 			&:hover{
 				cursor: pointer;
 				text-decoration: underline;
