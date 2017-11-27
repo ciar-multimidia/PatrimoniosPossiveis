@@ -1419,11 +1419,17 @@ footer {
       -ms-justify-content: center;
       -o-justify-content: center;
       justify-content: center;
-      -ms-flex-pack: center; }
+      -ms-flex-pack: center;
+      font-family: "Flama", Tahoma, sans-serif;
+      font-size: 1.2em;
+      font-weight: 300;
+      margin-bottom: 4em; }
       footer nav.sumario div.ficha-e-galeria a {
-        margin-right: 1em; }
-        footer nav.sumario div.ficha-e-galeria a:last-child {
-          margin-right: 0; }
+        width: 25%; }
+        footer nav.sumario div.ficha-e-galeria a:first-child {
+          text-align: right; }
+      footer nav.sumario div.ficha-e-galeria span {
+        margin: 0 0.5em; }
     footer nav.sumario h2 {
       width: 100%;
       font-size: 1.7em;
@@ -1455,8 +1461,7 @@ footer {
       justify-content: space-between;
       -ms-flex-pack: justify; }
       footer nav.sumario section.itens a {
-        width: 50%;
-        padding-right: 2em;
+        width: 48%;
         margin-bottom: 2.5em;
         overflow-wrap: normal;
         word-break: normal; }
@@ -1471,17 +1476,19 @@ footer {
           font-style: italic;
           color: #b3b3b3; }
       footer nav.sumario section.itens.menores {
-        -webkit-box-pack: start;
-        -moz-box-pack: start;
-        box-pack: start;
-        -webkit-justify-content: flex-start;
-        -moz-justify-content: flex-start;
-        -ms-justify-content: flex-start;
-        -o-justify-content: flex-start;
-        justify-content: flex-start;
-        -ms-flex-pack: start; }
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        box-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center; }
         footer nav.sumario section.itens.menores a {
-          width: 25%;
-          padding-right: 1em; }
+          width: 25%; }
+          footer nav.sumario section.itens.menores a:first-child {
+            margin-right: 4%;
+            text-align: right; }
 
 /*# sourceMappingURL=style.css.map */

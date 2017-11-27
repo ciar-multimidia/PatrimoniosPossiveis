@@ -175,13 +175,21 @@ footer{
 		div.ficha-e-galeria{
 			@include display(flex);
 			@include justify-content(center);
+			font-family: $fonte-titulo;
+			font-size: 1.2em;
+			font-weight: 300;
+			margin-bottom: 4em;
 
 			a{
-				margin-right: 1em;
-				&:last-child{
-					margin-right: 0;
+				width: 25%;
+				&:first-child{
+					text-align: right;
 				}
 			}	
+
+			span{
+				margin: 0 0.5em;
+			}
 		}
 
 		h2{
@@ -199,8 +207,8 @@ footer{
 			@include justify-content(space-between);
 
 			a{
-				width: 50%;
-				padding-right: 2em;
+				width: 48%;
+				// padding-right: 2em;
 				margin-bottom: 2.5em;
 				overflow-wrap: normal; 
 				word-break: normal;
@@ -221,11 +229,15 @@ footer{
 			}
 
 			&.menores{
-				@include justify-content(flex-start);
+				@include justify-content(center);
 
 				a{
 					width: 25%;
-					padding-right: 1em;
+					// padding-right: 2em;
+					&:first-child{
+						margin-right: 4%;
+						text-align: right;
+					}
 				}
 			}
 		}
