@@ -689,6 +689,14 @@ main {
       content: "";
       display: table;
       clear: both; }
+    main section.texto.cidadeano {
+      border-top: 1px solid;
+      text-align: center; }
+      main section.texto.cidadeano p {
+        width: 100%;
+        font-size: 1.2em;
+        font-weight: normal;
+        font-family: "Flama", Tahoma, sans-serif; }
     main section.texto *:first-child {
       margin-top: 0; }
     main section.texto h2, main section.texto h3, main section.texto h4 {
