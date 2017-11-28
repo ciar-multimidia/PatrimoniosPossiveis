@@ -8,6 +8,19 @@ $vermelho: #d4464b;
 $azul: #6087fd;
 $branco: hsl(0,0%,99%);
 
+
+$width: 1200px;
+$width-g: 1200px;
+$width-m: 960px;
+$width-p: 450px;
+$width-texto-padrao: 630px;
+
+$tela-gigante: 1400px;
+$tela-grande: 1000px;
+$tela-media: 700px;
+$tela-pequena: 500px;
+
+
 html,body{
 	&.blockscroll{
 		overflow: hidden;

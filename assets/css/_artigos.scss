@@ -57,6 +57,71 @@ section.texto{
 			width: 100%;
 			margin: 0 0 2em;
 		}
+
+		section.ficha-catalografica{
+			& > p{
+				font-weight: bold;
+				margin-bottom: 0;
+			}
+
+			div.borda{
+				padding: 1em 1.5em;
+				border: 1px solid;
+				@include display(flex);
+				div{
+					p{
+						margin-bottom: 1em;
+					}
+					&:first-child{
+						margin-right: 1.5em;
+					}
+				}	
+			}
+		}
+
+		.logos{
+			width: 100%;
+			@include display(flex);
+			@include justify-content(space-between);
+			@include align-items(flex-start);
+			img{
+				height: auto;
+				display: inline-block;
+				&.logobrasil{
+					width: 25%;
+				}
+
+				&.logomedialab{
+					width: 25%;
+				}
+
+				&.logociar{
+					width: 35%;
+				}
+			}
+		}
+
+		.publicaciar{
+			margin-top: 2em;
+			border-top: 2px dotted grey;
+			text-align: center;
+			width: 100%;
+			font-size: 0.9em;
+
+			p{
+				margin: 0.5em 0;
+			}
+			a{
+				display: block;
+				width: 20%;
+				height: auto;
+				margin: 0 auto;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
 	}
 
 	&.premios{

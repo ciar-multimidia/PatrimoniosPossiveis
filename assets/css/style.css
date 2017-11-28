@@ -493,6 +493,10 @@ i, em {
     -ms-flex-align: baseline;
     width: 1200px;
     padding: 12px 0; }
+  #topo a {
+    display: block; }
+    #topo a, #topo a:visited, #topo a:link, #topo a:active, #topo a:focus, #topo a:hover {
+      text-decoration: none; }
   #topo h1 {
     margin: 0;
     color: white;
@@ -585,6 +589,75 @@ main {
       main section.texto.duplo p {
         width: 100%;
         margin: 0 0 2em; }
+      main section.texto.duplo section.ficha-catalografica > p {
+        font-weight: bold;
+        margin-bottom: 0; }
+      main section.texto.duplo section.ficha-catalografica div.borda {
+        padding: 1em 1.5em;
+        border: 1px solid;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        main section.texto.duplo section.ficha-catalografica div.borda div p {
+          margin-bottom: 1em; }
+        main section.texto.duplo section.ficha-catalografica div.borda div:first-child {
+          margin-right: 1.5em; }
+      main section.texto.duplo .logos {
+        width: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        box-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+        -ms-flex-pack: justify;
+        -webkit-box-align: start;
+        -moz-box-align: start;
+        box-align: start;
+        -webkit-align-items: flex-start;
+        -moz-align-items: flex-start;
+        -ms-align-items: flex-start;
+        -o-align-items: flex-start;
+        align-items: flex-start;
+        -ms-flex-align: start; }
+        main section.texto.duplo .logos img {
+          height: auto;
+          display: inline-block; }
+          main section.texto.duplo .logos img.logobrasil {
+            width: 25%; }
+          main section.texto.duplo .logos img.logomedialab {
+            width: 25%; }
+          main section.texto.duplo .logos img.logociar {
+            width: 35%; }
+      main section.texto.duplo .publicaciar {
+        margin-top: 2em;
+        border-top: 2px dotted grey;
+        text-align: center;
+        width: 100%;
+        font-size: 0.9em; }
+        main section.texto.duplo .publicaciar p {
+          margin: 0.5em 0; }
+        main section.texto.duplo .publicaciar a {
+          display: block;
+          width: 20%;
+          height: auto;
+          margin: 0 auto; }
+          main section.texto.duplo .publicaciar a img {
+            width: 100%;
+            height: auto; }
     main section.texto.premios h2 {
       font-size: 2.8em;
       margin-bottom: 0; }

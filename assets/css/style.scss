@@ -9,10 +9,6 @@
 
 
 
-$width: 1200px;
-$width-texto-padrao: 630px;
-
-
 #topo{
 	width: 100%;
 	background-color: black;
@@ -21,9 +17,27 @@ $width-texto-padrao: 630px;
 	div.container{
 		@include display(flex);
 		@include align-items(baseline);
-		width: $width;
+		width: $width-g;
 		padding: 12px 0;
+		// @media (max-width: $tela-gigante){
+		// 	width: $width-m;
+		// }
 
+		// @media (max-width: $tela-grande){
+		// 	width: $width-p;
+		// }
+
+		// @media (max-width: $tela-media){
+		// 	width: 100%;
+		// }
+
+	}
+
+	a{
+		display: block;
+		&, &:visited, &:link, &:active, &:focus, &:hover{
+			text-decoration: none;		
+		}
 	}
 
 	h1{
