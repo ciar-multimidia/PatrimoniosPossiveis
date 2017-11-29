@@ -285,6 +285,7 @@ section.texto{
 }
 
 section.ensaios{
+	margin-top: 4em;
 	width: $width;
 	@include display(flex);
 	@include flex-wrap(wrap);
@@ -313,14 +314,18 @@ section.ensaios{
 		}
 
 		&:hover{
-			p{
+			h2{
 				padding: 1em 0.4em 1em;
 			}
 		}
 
-		p{
+		h2{
+			font-family: $fonte-corpo;
+			font-weight: bold;
+			font-size: 1em;
 			background-color: none;
-			background: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.0));
+			background: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,0.7)), to(rgba(0,0,0,0.0)));
+			background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.0) 100%);
 			margin: 0;
 			width: 100%;
 			position: absolute;
@@ -328,6 +333,11 @@ section.ensaios{
 			left: 0;
 			padding: 1em 0.4em 0.4em;
 			@include transition(padding 0.2s linear);
+			span{
+				font-weight: normal;
+				display: block;
+				font-size: 0.9em;
+			}
 		}
 	}
 }
