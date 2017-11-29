@@ -519,6 +519,22 @@ i, em {
     line-height: 1.6;
     font-weight: 300;
     color: white; }
+  #topo.topo-intro {
+    border-bottom: 2px solid black;
+    z-index: 6; }
+    #topo.topo-intro div.container {
+      padding: 40px 0 120px;
+      background-image: url(../media/foto.jpg);
+      background-repeat: no-repeat;
+      background-size: auto 750px;
+      background-position-x: 450px;
+      background-position-y: -60px; }
+      #topo.topo-intro div.container h1 {
+        font-size: 4.2em;
+        font-weight: bold;
+        line-height: 1.15; }
+        #topo.topo-intro div.container h1 span {
+          font-weight: inherit; }
 
 main {
   width: 100%;
@@ -549,11 +565,15 @@ main {
   align-items: center;
   -ms-flex-align: center; }
   main h1 {
+    margin: 0 0 1.5em;
     width: 100%;
     font-size: 3em;
     line-height: 1.2;
     font-weight: 300;
     color: black; }
+    main h1.grande {
+      font-size: 3.6em;
+      width: 100%; }
   main figure figcaption {
     font-size: 0.9em;
     line-height: 1.4; }
@@ -569,6 +589,8 @@ main {
       content: 'p. '; }
   main section.texto {
     width: 1200px; }
+    main section.texto h1.grande {
+      width: 100%; }
     main section.texto.duplo {
       display: -webkit-box;
       display: -moz-box;
