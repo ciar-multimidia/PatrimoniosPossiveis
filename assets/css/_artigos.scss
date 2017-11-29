@@ -3,7 +3,7 @@
 $width-vertical: 420px;
 
 h1{
-	margin: 0 0 1.5em;
+	margin: 0;
 	width: 100%;
 	font-size: 3em;
 	line-height: 1.2;
@@ -12,6 +12,13 @@ h1{
 	&.grande{
 		font-size: 3.6em;
 		width: 100%;
+	}
+}
+
+p{
+	&.autoria-emlinha{
+		font-size: 0.9em;
+		margin: 0 0 3em;
 	}
 }
 

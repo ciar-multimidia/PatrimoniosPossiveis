@@ -520,7 +520,6 @@ i, em {
     font-weight: 300;
     color: white; }
   #topo.topo-intro {
-    border-bottom: 2px solid black;
     z-index: 6; }
     #topo.topo-intro div.container {
       padding: 40px 0 120px;
@@ -565,7 +564,7 @@ main {
   align-items: center;
   -ms-flex-align: center; }
   main h1 {
-    margin: 0 0 1.5em;
+    margin: 0;
     width: 100%;
     font-size: 3em;
     line-height: 1.2;
@@ -574,6 +573,9 @@ main {
     main h1.grande {
       font-size: 3.6em;
       width: 100%; }
+  main p.autoria-emlinha {
+    font-size: 0.9em;
+    margin: 0 0 3em; }
   main figure figcaption {
     font-size: 0.9em;
     line-height: 1.4; }
@@ -1181,8 +1183,6 @@ main {
   -o-align-items: flex-start;
   align-items: flex-start;
   -ms-flex-align: start; }
-  #cabecalho-artigo h1 {
-    margin: 0 0 1.5em; }
   #cabecalho-artigo h2.eixo {
     font-weight: 300;
     font-size: 1.2em;
@@ -1190,7 +1190,8 @@ main {
     margin: 0;
     line-height: 1; }
   #cabecalho-artigo .resumos {
-    width: 630px; }
+    width: 630px;
+    margin-top: 4em; }
     #cabecalho-artigo .resumos input[type='radio'] {
       position: absolute;
       height: 0px;
@@ -1263,6 +1264,7 @@ main {
     #cabecalho-artigo .resumos section.resumo {
       display: none; }
   #cabecalho-artigo .minicurriculo {
+    margin-top: 4em;
     width: 450px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     background-color: #fcfcfc; }
