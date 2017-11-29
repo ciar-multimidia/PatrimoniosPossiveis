@@ -69,29 +69,6 @@
 		font-weight: 300;
 		color: white;
 	}
-
-	&.topo-intro{
-		border-bottom: 2px solid black;
-		z-index: 6;
-		div.container{
-			
-			padding: 40px 0 120px;
-			background-image: url(../media/foto.jpg);
-			background-repeat: no-repeat;
-			background-size: auto 750px;
-			background-position-x: 450px;
-			background-position-y: -60px;
-
-			h1{
-				font-size: 4.2em;
-				font-weight: bold;
-				line-height: 1.15;
-				span{
-					font-weight: inherit;
-				}
-			}
-		}
-	}
 }
 
 
