@@ -522,18 +522,26 @@ i, em {
   #topo.topo-intro {
     z-index: 6; }
     #topo.topo-intro div.container {
-      padding: 40px 0 120px;
+      padding: 40px 0 40px;
       background-image: url(../media/foto.jpg);
       background-repeat: no-repeat;
-      background-size: auto 750px;
+      background-size: auto 800px;
       background-position-x: 450px;
-      background-position-y: -60px; }
+      background-position-y: -80px; }
       #topo.topo-intro div.container h1 {
         font-size: 4.2em;
         font-weight: bold;
         line-height: 1.15; }
         #topo.topo-intro div.container h1 span {
           font-weight: inherit; }
+      #topo.topo-intro div.container h2 {
+        margin-bottom: 5em; }
+      #topo.topo-intro div.container h3 {
+        margin: 0;
+        font-size: 1.4em;
+        line-height: 1.4;
+        font-weight: normal;
+        color: white; }
 
 main {
   width: 100%;
@@ -639,6 +647,13 @@ main {
         display: -moz-flex;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-lines: multiple;
+        -moz-box-lines: multiple;
+        box-lines: multiple;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
         -webkit-box-pack: justify;
         -moz-box-pack: justify;
         box-pack: justify;
@@ -648,24 +663,37 @@ main {
         -o-justify-content: space-between;
         justify-content: space-between;
         -ms-flex-pack: justify;
-        -webkit-box-align: start;
-        -moz-box-align: start;
-        box-align: start;
-        -webkit-align-items: flex-start;
-        -moz-align-items: flex-start;
-        -ms-align-items: flex-start;
-        -o-align-items: flex-start;
-        align-items: flex-start;
-        -ms-flex-align: start; }
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        box-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -ms-flex-align: center; }
         main section.texto.duplo .logos img {
           height: auto;
-          display: inline-block; }
+          display: inline-block;
+          margin-bottom: 2em; }
           main section.texto.duplo .logos img.logobrasil {
             width: 25%; }
           main section.texto.duplo .logos img.logomedialab {
             width: 25%; }
           main section.texto.duplo .logos img.logociar {
             width: 35%; }
+          main section.texto.duplo .logos img.logofeyts {
+            width: 30%; }
+          main section.texto.duplo .logos img.logouva {
+            width: 10%; }
+          main section.texto.duplo .logos img.logooepe {
+            width: 15%; }
+          main section.texto.duplo .logos img.logourbs {
+            width: 25%; }
+          main section.texto.duplo .logos img.logozaragoza {
+            width: 45%; }
+          main section.texto.duplo .logos img.logogovesp {
+            width: 45%; }
       main section.texto.duplo .publicaciar {
         margin-top: 2em;
         border-top: 2px dotted grey;
@@ -1486,7 +1514,7 @@ footer {
   footer nav.sumario {
     width: 1200px;
     margin: 0 auto;
-    padding: 5em 0;
+    padding: 5em 0 15em;
     display: none;
     -webkit-transition: opacity 0.1s linear;
     -moz-transition: opacity 0.1s linear;
@@ -1517,6 +1545,82 @@ footer {
       font-size: 1.2em;
       font-weight: 300;
       margin-bottom: 4em; }
+    footer nav.sumario a.bt-ensaios-visuais {
+      border: 1px solid white;
+      position: relative;
+      width: 100%;
+      height: 140px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      box-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -ms-flex-align: center;
+      background-image: url("../media/bt_ensaios.jpg");
+      background-repeat: repeat-x;
+      background-size: cover;
+      -webkit-animation: fundorodando 240s linear 0s infinite alternate;
+      -moz-animation: fundorodando 240s linear 0s infinite alternate;
+      animation: fundorodando 240s linear 0s infinite alternate; }
+      footer nav.sumario a.bt-ensaios-visuais:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        -webkit-transition: background-color 0.2s linear;
+        -moz-transition: background-color 0.2s linear;
+        transition: background-color 0.2s linear; }
+      footer nav.sumario a.bt-ensaios-visuais span {
+        display: block;
+        text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.8);
+        font-family: "Flama", Tahoma, sans-serif;
+        font-size: 2.4em;
+        line-height: 1;
+        text-align: center;
+        font-weight: 300;
+        z-index: 2;
+        -webkit-transition: -webkit-transform 0.2s ease-out;
+        -moz-transition: -moz-transform 0.2s ease-out;
+        transition: transform 0.2s ease-out; }
+      footer nav.sumario a.bt-ensaios-visuais:hover {
+        text-decoration: none; }
+        footer nav.sumario a.bt-ensaios-visuais:hover:before {
+          background-color: rgba(0, 0, 0, 0.7); }
+        footer nav.sumario a.bt-ensaios-visuais:hover span {
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          transform: scale(1.1); }
+@-webkit-keyframes fundorodando {
+  to {
+    background-position-x: -7000px; } }
+@-moz-keyframes fundorodando {
+  to {
+    background-position-x: -7000px; } }
+@keyframes fundorodando {
+  to {
+    background-position-x: -7000px; } }
     footer nav.sumario div.ficha-e-galeria {
       display: -webkit-box;
       display: -moz-box;
@@ -1550,6 +1654,27 @@ footer {
       font-weight: 300;
       border-bottom: 1px dotted;
       margin: 1em 0 0.5em; }
+      footer nav.sumario h2:nth-of-type(1) {
+        color: #fcf381;
+        border-bottom-color: #FBF168; }
+        footer nav.sumario h2:nth-of-type(1) + .itens a:hover {
+          color: #fcf381; }
+          footer nav.sumario h2:nth-of-type(1) + .itens a:hover p {
+            color: #fcf381; }
+      footer nav.sumario h2:nth-of-type(2) {
+        color: #d95b5f;
+        border-bottom-color: #d4464b; }
+        footer nav.sumario h2:nth-of-type(2) + .itens a:hover {
+          color: #d95b5f; }
+          footer nav.sumario h2:nth-of-type(2) + .itens a:hover p {
+            color: #d95b5f; }
+      footer nav.sumario h2:nth-of-type(3) {
+        color: #799afd;
+        border-bottom-color: #6087fd; }
+        footer nav.sumario h2:nth-of-type(3) + .itens a:hover {
+          color: #799afd; }
+          footer nav.sumario h2:nth-of-type(3) + .itens a:hover p {
+            color: #799afd; }
     footer nav.sumario section.itens {
       display: -webkit-box;
       display: -moz-box;
@@ -1578,7 +1703,10 @@ footer {
         width: 48%;
         margin-bottom: 2.5em;
         overflow-wrap: normal;
-        word-break: normal; }
+        word-break: normal;
+        -webkit-transition: color 0.1s linear 0s;
+        -moz-transition: color 0.1s linear 0s;
+        transition: color 0.1s linear 0s; }
         footer nav.sumario section.itens a h3 {
           font-size: 1em;
           font-family: "Source Sans Pro", sans-serif;
@@ -1588,7 +1716,10 @@ footer {
         footer nav.sumario section.itens a p {
           margin: 0;
           font-style: italic;
-          color: #b3b3b3; }
+          color: #b3b3b3;
+          -webkit-transition: color 0.1s linear 0s;
+          -moz-transition: color 0.1s linear 0s;
+          transition: color 0.1s linear 0s; }
       footer nav.sumario section.itens.menores {
         -webkit-box-pack: center;
         -moz-box-pack: center;

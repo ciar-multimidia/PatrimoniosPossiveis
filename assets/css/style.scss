@@ -74,12 +74,12 @@
 		z-index: 6;
 		div.container{
 			
-			padding: 40px 0 120px;
+			padding: 40px 0 40px;
 			background-image: url(../media/foto.jpg);
 			background-repeat: no-repeat;
-			background-size: auto 750px;
+			background-size: auto 800px;
 			background-position-x: 450px;
-			background-position-y: -60px;
+			background-position-y: -80px;
 
 			h1{
 				font-size: 4.2em;
@@ -88,6 +88,18 @@
 				span{
 					font-weight: inherit;
 				}
+			}
+
+			h2{
+				margin-bottom: 5em;
+			}
+
+			h3{
+				margin: 0;
+				font-size: 1.4em;
+				line-height: 1.4;
+				font-weight: normal;
+				color: white;
 			}
 		}
 	}

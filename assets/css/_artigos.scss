@@ -98,22 +98,24 @@ section.texto{
 		.logos{
 			width: 100%;
 			@include display(flex);
+			@include flex-wrap(wrap);
 			@include justify-content(space-between);
-			@include align-items(flex-start);
+			@include align-items(center);
 			img{
 				height: auto;
 				display: inline-block;
-				&.logobrasil{
-					width: 25%;
-				}
+				margin-bottom: 2em;
+				&.logobrasil	{ width: 25%;}
+				&.logomedialab	{ width: 25%;}
+				&.logociar		{ width: 35%;}
+				&.logofeyts		{ width: 30%;}
+				&.logouva		{ width: 10%;}
+				&.logooepe		{ width: 15%;}
+				&.logourbs		{ width: 25%;}
+				&.logozaragoza	{ width: 45%;}
+				&.logogovesp	{ width: 45%;}
 
-				&.logomedialab{
-					width: 25%;
-				}
 
-				&.logociar{
-					width: 35%;
-				}
 			}
 		}
 
