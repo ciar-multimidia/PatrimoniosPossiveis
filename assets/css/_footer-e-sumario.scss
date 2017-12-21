@@ -299,23 +299,37 @@ footer{
 				overflow-wrap: normal; 
 				word-break: normal;
 				@include transition(color 0.1s linear 0s);
+				@include display(flex);
+				// @include align-items(center);
 
-				h3{
-					font-size: 1em;
-					font-family: $fonte-corpo;
-					margin: 0;
-					font-weight: bold;
-					line-height: 1.4;
+				.titulo-e-autores{
+					@include flex-grow(1);
+					h3{
+						font-size: 1em;
+						font-family: $fonte-corpo;
+						margin: 0;
+						font-weight: bold;
+						line-height: 1.4;
 
+					}
+
+					p{
+						margin: 0;
+						font-style: italic;
+						color: hsl(0,0%,70%);
+						@include transition(color 0.1s linear 0s);
+
+					}
 				}
 
-				p{
-					margin: 0;
-					font-style: italic;
-					color: hsl(0,0%,70%);
-					@include transition(color 0.1s linear 0s);
-
+				span.primeira-pag{
+					padding-left: 1.5em;
+					// font-size: 1.2em;
+					// font-weight: bold;
+					font-family: $fonte-titulo;
 				}
+
+				
 			}
 
 			&.menores{
@@ -327,6 +341,15 @@ footer{
 					&:first-child{
 						margin-right: 4%;
 						text-align: right;
+						@include justify-content(flex-end);
+						.primeira-pag{
+							padding-left: 0;
+							padding-right: 1.5em;
+						}
+					}
+
+					.titulo-e-autores{
+						@include flex-grow(0);
 					}
 				}
 			}
